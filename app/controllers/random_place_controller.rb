@@ -1,0 +1,2 @@
+class RandomPlaceController < ApplicationController
+end
