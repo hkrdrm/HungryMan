@@ -1,7 +1,21 @@
 HungryMan::Application.routes.draw do
+  resources :categories
+
   resources :places
 
+  root :to => "static_pages#home"
   get "static_pages/home"
+  get "random_place/random"
+  
+  get "roulette_place/index"
+  get "roulette_place/spin"
+  get "roulette_place/AddCategory"
+  get "roulette_place/clear"
+  post "roulette_place/AddCategory"
+
+  match 'spin', to: 'roulette_place#spin'
+  
+ # match '/addcat', to: 'roulette_place#AddCategory'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

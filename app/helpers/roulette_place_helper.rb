@@ -1,0 +1,2 @@
+module RoulettePlaceHelper
+end
